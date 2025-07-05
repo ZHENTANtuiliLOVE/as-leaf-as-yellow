@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>班级论坛</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header h1.logo {
+        font-size: 36px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    header nav ul {
+        display: flex;
+        list-style: none;
+    }
+    header nav ul li {
+        margin-left: 20px;
+    }
+    header nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    header.search {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+    header.search input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    header.search button {
+        padding: 10px 20px;
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+        color: #333;
+        cursor: pointer;
+    }
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    main.banner {
+        background-color: #f2f2f2;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    main.banner h2 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    main.banner p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    main.banner a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    footer p {
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+    
+    <header>
+        <h1 class="logo">班级论坛</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="classtest.html">课程表</a></li>
+                <li><a href="teacher.html">教师</a></li>
+                <li><a href="forum.html">论坛</a></li>
+                <li><a href="message.html">留言板</a></li>
+                <li><a href="login.html">登陆</a></li>
+                </ul>
+        </nav>
+
+        <div class="search container" >
+            <input type="text" placeholder="搜索">
+            <button>搜索</button>
+        </div>
+    </header>
+    <main>
+        <section class="banner" >
+            <h2>欢迎来到班级论坛</h2>
+            <p>这里是班级的活动、资源、讨论区，欢迎大家的加入！</p>
+            <a href="">查看更多</a>    
+        </section>
+    </main>
+    <footer class="container">
+        <p>版权所有 © 2021 班级论坛</p>
+        <p>联系我们：ZHENTANtuiliLOve@outlook.com</p>
+        <p>地址：南京市百家湖小学四年级部12班</p>
+        <p>注：本站纯属个人开发，不代表任何组织或单位，如有侵权请联系本人删除。</p>
+    </footer>
+</body>
+</html>

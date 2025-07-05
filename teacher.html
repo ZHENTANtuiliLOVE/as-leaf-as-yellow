@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教师论坛与资源分享区</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .forum, .resources {
+            margin-bottom: 30px;
+        }
+        .forum h2, .resources h2 {
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .post, .resource {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .resource a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .resource a:hover {
+            text-decoration: underline;
+        }
+        .comments {
+            margin-top: 10px;
+        }
+        .comment {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #eee;
+        }
+        .upload-form {
+            margin-bottom: 20px;
+        }
+        .upload-form input[type="text"], .upload-form input[type="file"] {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .upload-form input[type="submit"] {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>欢迎来到教师论坛与资源分享区</h1>
+        </div>
+        <div class="forum">
+            <h2>教师论坛</h2>
+            <div class="post">
+                <h3>帖子标题一</h3>
+                <p>这是帖子内容摘要一...</p>
+                <button onclick="showPostDetails('post1')">查看详情</button>
+                <div id="post1" class="details" style="display:none;">
+                    <h4>帖子标题一</h4>
+                    <p>这是帖子的详细内容一...</p>
+                    <div class="comments">
+                        <h5>评论区</h5>
+                        <div class="comment">
+                            <p>评论一...</p>
+                        </div>
+                        <div class="comment">
+                            <p>评论二...</p>
+                        </div>
+                        <!-- 更多评论可以在此处添加 -->
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <h3>帖子标题二</h3>
+                <p>这是帖子内容摘要二...</p>
+                <button onclick="showPostDetails('post2')">查看详情</button>
+                <div id="post2" class="details" style="display:none;">
+                    <h4>帖子标题二</h4>
+                    <p>这是帖子的详细内容二...</p>
+                    <div class="comments">
+                        <h5>评论区</h5>
+                        <div class="comment">
+                            <p>评论一...</p>
+                        </div>
+                        <div class="comment">
+                            <p>评论二...</p>
+                        </div>
+                        <!-- 更多评论可以在此处添加 -->
+                    </div>
+                </div>
+            </div>
+            <!-- 更多帖子可以在此处添加 -->
+        </div>
+        <div class="upload-form">
+            <h2>上传帖子</h2>
+            <form>
+                <input type="text" name="postTitle" placeholder="帖子标题">
+                <textarea name="postContent" rows="4" placeholder="帖子内容"></textarea>
+                <input type="submit" value="提交帖子">
+            </form>
+        </div>
+        <div class="resources">
+            <h2>资源分享区</h2>
+            <div class="upload-form">
+                <h3>上传资源</h3>
+                <form>
+                    <input type="text" name="resourceTitle" placeholder="资源标题">
+                    <input type="file" name="resourceFile">
+                    <input type="submit" value="上传资源">
+                </form>
+            </div>
+            <div class="resource">
+                <a href="#">资源链接一</a>
+                <p>资源描述一...</p>
+            </div>
+            <div class="resource">
+                <a href="#">资源链接二</a>
+                <p>资源描述二...</p>
+            </div>
+            <!-- 更多资源可以在此处添加 -->
+        </div>
+    </div>
+
+    <script>
+        function showPostDetails(postId) {
+            var details = document.getElementById(postId);
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
