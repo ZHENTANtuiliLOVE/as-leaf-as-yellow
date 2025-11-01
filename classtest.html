@@ -1,73 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>课程表</title>
-</head>
-<style>
-    table {
-        border-collapse: collapse;
-        width: 100%;
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px;
         }
-        th, td {
-        border: 1px solid black;
-        text-align: center;
-        padding: 10px;
-        }
-        th {
-        background-color: #ccc; 
-        }
-        /* 表格的边框 */
-        table {
+        
+        .schedule-table {
+            width: 100%;
             border-collapse: collapse;
-            border: 1px solid black;
+            border: 2px solid #2196F3;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        /* 表格的单元格边框 */
-        td {
-            border: 1px solid black;
-            padding: 10px;
+        
+        .schedule-table th,
+        .schedule-table td {
+            padding: 10px 15px;
+            text-align: center;
+            border: 1px solid #ddd;
         }
-
-        /* 表格的标题背景色 */
-        th {
-            background-color: #ccc;
+        
+        .schedule-table th {
+            background: #2196F3;
+            color: #fff;
+            font-weight: bold;
         }
-        /* 表格的标题字体大小 */
-        th {
-            font-size: 18px;
+        
+        .schedule-table td {
+            background: #fff;
         }
-            /* 表格的标题字体颜色 */
-        th {
+        
+        .special-row {
+            background: #4CAF50;
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .special-row-2 {
+            background: #FF9800;
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .日の {
+            background: #FFC107;
             color: #333;
         }
-</style>
+        
+        .special-cell {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .empty-cell {
+            background: #f4f4f4;
+            color: #888;
+        }
+    </style>
+</head>
 <body>
-    
-    <table> 
-        <tr></tr>
-        <tr>
-            <th>星期一</th>
-            <th>星期二</th>
-            <th>星期三</th>
-            <th>星期四</th>
-            <th>星期五</th>
-        </tr>
-        <tr>
-            <td>语文</td>
-            <td>数学</td>
-            <td>英语</td>
-            <td>物理</td>
-            <td>化学</td>
-        </tr>
-        <tr>
-            <td>历史</td>
-            <td>地理</td>
-            <td>政治</td>
-            <td>生物</td>
-            <td>心理</td>
-        </tr>
+    <h1>课程表</h1>
+    <table class="schedule-table">
+        <thead>
+            <tr>
+                <th>周次</th>
+                <th>周一</th>
+                <th>周二</th>
+                <th>周三</th>
+                <th>周四</th>
+                <th>周五</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>第一节课<br>(8:20--9:00)</td>
+                <td>数学</td>
+                <td>语文</td>
+                <td>英语</td>
+                <td>语文</td>
+                <td>语文</td>
+            </tr>
+            <tr>
+                <td>第二节课<br>(9:15--9:55)</td>
+                <td>语文</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>数学</td>
+                <td>体综 2</td>
+            </tr>
+            <!-- 阳光体育活动 -->
+            <tr class="special-row">
+                <td>阳光体育活动<br>(9:55--10:25)</td>
+                <td colspan="5">室内操/大课间</td>
+            </tr>
+            <tr>
+                <td>第三节课<br>(10:25--11:05)</td>
+                <td>音乐</td>
+                <td>美术</td>
+                <td>语文</td>
+                <td>音乐</td>
+                <td>数学</td>
+            </tr>
+            <tr class="特殊时间-row 日の">
+                <td>第四节课（眼）<br>(11:15--12:00)</td>
+                <td>英语</td>
+                <td>数学</td>
+                <td>科学</td>
+                <td>科学</td>
+                <td>美术</td>
+            </tr>
+            <!-- 午休 -->
+            <tr class="special-row-2">
+                <td>午休<br>(12:40--13:20)</td>
+                <td colspan="5">午休</td>
+            </tr>
+            <tr>
+                <td>第五节课<br>(13:30--14:10)</td>
+                <td>体育</td>
+                <td>体育</td>
+                <td>体综 1</td>
+                <td>体育</td>
+                <td>英语</td>
+            </tr>
+            <!-- 阳光体育活动 -->
+            <tr class="special-row">
+                <td>阳光体育活动<br>(14:20--14:50)</td>
+                <td colspan="5">室内操/大课间</td>
+            </tr>
+            <tr>
+                <td>第七节课（眼）<br>(15:00--15:45)</td>
+                <td>劳动</td>
+                <td>德法读本</td>
+                <td>班队</td>
+                <td>信息</td>
+                <td>道德与法治</td>
+            </tr>
+            <tr>
+                <td>第八节课<br>(16:00--16:40)</td>
+                <td class="empty-cell">-</td>
+                <td class="empty-cell">-</td>
+                <td class="empty-cell">-</td>
+                <td class="empty-cell">-</td>
+                <td class="empty-cell">-</td>
+            </tr>
+            <tr>
+                <td>第八节课<br>(16:50--17:30)</td>
+                <td class="empty-cell">-</td>
+                <td class="empty-cell">-</td>
+                <td class="empty-cell">-</td>
+                <td class="empty-cell">-</td>
+                <td class="empty-cell">-</td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>
